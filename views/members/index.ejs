@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="members/create">Create Members</a></h3>
+      <h1>Members List</h1>
+      <% if(members.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Member Name</th>
+            <th>Phone Number</th>
+            <th>ID Project</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<members.length;i++) { %>
+            <tr>
+              <td><a href="/members/show/<%= members[i]._id%>"><%= members[i].name%></a></td>
+              <td><%= members[i].phone%></td>
+              <td><%= members[i].Idproject%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No members found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/projects">Project List</a></h3>
+      <h1>Project Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name Project</td>
+            <td>:</td>
+            <td><%= project.nameproject%></td>
+          </tr>
+          <tr>
+            <td>Name Member</td>
+            <td>:</td>
+            <td><%= project.listmember.namemember%></td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>:</td>
+            <td><%= project.listmember.phone%></td>
+          </tr>         
+        </tbody>
+      </table>
+      <form action="/projects/delete/<%= projects._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

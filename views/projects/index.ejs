@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="projects/create">Create Projects</a></h3>
+      <h1>Project List</h1>
+      <% if(projects.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Name Project</th>
+            <th>List Member</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<projects.length;i++)
+           { %>
+            <tr>
+              <td><a href="/projects/show/<%= projects[i]._id%>"><%= projects[i].name%></a></td>
+              <td>
+                <tr>
+                    <td>%=projects[i].listmember[j].namemember%</td>
+                    <td>%=projects[i].listmember[j].phone%</td>
+                </tr>
+              </td>             
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No projects found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

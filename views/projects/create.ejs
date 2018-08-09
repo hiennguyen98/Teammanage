@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Member</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/projects">Project List</a></h3>
+      <h1>Create New Project</h1>
+      <form action="/projects/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name Project</td>
+              <td><input type="text" name="nameproject" /></td>
+            </tr>
+            <tr>
+              <td>List Member</td>
+              <td><input type="text" name="namemember"/></td>
+              <td></td>
+              <td><input type="text" name="phone" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
